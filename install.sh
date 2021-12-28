@@ -3,7 +3,7 @@ INSTALLER_USER=`who am i | awk '{print $1}'`
 echo "+----------<{=====x=====}>----------+"
 echo "Welcome to paper-pi!"
 echo "Please specify how much RAM you want to allocate to the server (e.g. 2G for 2 gigabytes, 512M for 512 megabytes)":
-read MEMALLOC
+read MEMALLOC </dev/tty
 sudo apt install -y git
 git clone https://github.com/ObsidianPresidium/paper-pi
 rm install.sh # remove this
