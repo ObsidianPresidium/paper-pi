@@ -12,7 +12,7 @@ This script downloads all the files into a folder called paper-pi, which will be
 2. (optional) Change the directory to where you'd like your server to run from.
 3. Copy-paste this command into the terminal, and run it:
 
-`curl -sSL install link | sudo bash`
+`curl -sSL https://raw.githubusercontent.com/ObsidianPresidium/paper-pi/main/install.sh | sudo bash`
 
 4. Run the server with `sh run_*_RAM.sh`, with * being either `512MB` or `1GB` or `2GB`, depending on how much memory you wish to allocate to the server.
 
