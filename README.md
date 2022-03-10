@@ -1,6 +1,6 @@
 # paper-pi
 An easy-to-use Paper Minecraft server installation script.
-Downloads Oracle's JDK 17 and a recent PaperMC Spigot server jarfile, and creates an environment for them to run.
+Downloads OpenJDK 17 and a recent PaperMC Spigot server jarfile, and creates an environment for them to run.
 
 This script assumes you agree to Minecraft's EULA, and that you are running Debian, or some variant of it, like Raspbian.
 
@@ -27,4 +27,4 @@ A good rule of thumb (assuming you're running Raspbian) is to leave 500 megs of 
 | Raspberry Pi 4 8GB | `7680M` |
 | Rapsberry Pi 400 | `3584M` |
 
-5. Run the server by using `sh run.sh`!
+5. Run the server by executing `paper-pi` in console!
