@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Start PaperMC Minecraft Server
+Exec=paper-pi
+Terminal=true
+Hidden=false
