@@ -4,17 +4,26 @@ MINECRAFT_SERVER_JAR="https://papermc.io/api/v2/projects/paper/versions/1.18.2/b
 START_COMMAND="paper-pi"
 PACKAGES="git openjdk-17-jre"
 ### ---
+which ls
+which dialog
+if $?==1 then
+    sudo apt install -y dialog
+fi
 
-echo "+----------<{=====x=====}>----------+"
-echo "Welcome to the paper-pi installation!"
+dialog --yesno "+----------<{=====x=====}>----------+\n
+Welcome to the paper-pi installation! This script will \
+install a Minecraft server to the folder ~/paper-pi,\
+do you want to continue?" 10 40
+ 
 echo "Please specify how much RAM you want to allocate to the server (e.g. 2G for 2 gigabytes, 512M for 512 megabytes)":
 read MEMALLOC </dev/tty
 echo "Please confirm that you want to install paper-pi. This will install these packages: $PACKAGES"
 read CONFIRM </dev/tty
 git clone https://github.com/ObsidianPresidium/paper-pi.git
-sudo apt install -y git openjdk-17-jre
+sudo apt install -y git openjdk-17-jre dialog
 cd paper-pi
 rm install.sh # remove myself
 wget -O "paper.jar" $MINECRAFT_SERVER_JAR
-echo "alias $START_COMMAND=java -Xmx$MEMALLOC -Xms$MEMALLOC -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar $PWD/paper.jar nogui" >> ~/.bashrc
-echo "Installation finished, you should be able to use the shortcut to launch the server now! (you can also start the server manually by using the paper-pi command in a terminal window)"
+echo "Exec=java -Xmx$MEMALLOC -Xms$MEMALLOC -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar $PWD/paper.jar" >> "Start PaperMC Minecraft Server.desktop"
+cp "Start PaperMC Minecraft Server.desktop" 
+echo "Installation finished, you should be able to use the shortcut to launch the server now!"
