@@ -15,7 +15,7 @@ fi
 
 dialog --yesno \
 "Welcome to the paper-pi installation! This script will \
-install a Minecraft server to the folder ~/paper-pi, \
+install a Minecraft server to the folder paper-pi, \
 this will install these packages: $PACKAGES
 do you want to continue?" 10 80
 if $?==1
@@ -42,6 +42,7 @@ cd paper-pi
 rm install.sh # remove myself
 wget -O "paper.jar" $MINECRAFT_SERVER_JAR
 echo "Exec=java -Xmx$memAlloc -Xms$memAlloc -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar $PWD/paper.jar" >> "Start PaperMC Minecraft Server.desktop"
+echo "Path=$PWD">>"Start PaperMC Minecraft Server.desktop"
 cp "Start PaperMC Minecraft Server.desktop" ~/Desktop/"Start PaperMC Minecraft Server.desktop"
 clear
 echo "Installation finished, you should be able to use the shortcut to launch the server now!"
