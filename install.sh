@@ -5,10 +5,7 @@ START_COMMAND="paper-pi"
 PACKAGES="git openjdk-17-jre"
 INSTALLED_DIALOG=false
 ### ---
-which ls >> /dev/null
-which dialog >> /dev/null
-if $?==1
-then
+if ! command -v dialog >/dev/null; then
     sudo apt install -y dialog
     INSTALLED_DIALOG=true
 fi
