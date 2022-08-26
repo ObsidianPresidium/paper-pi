@@ -1,7 +1,7 @@
 #!/bin/bash
 ### --- These values are custom. They can be replaced with what you desire.
-MINECRAFT_SERVER_VERSION="1.18.2"
-MINECRAFT_SERVER_BUILD="344"
+MINECRAFT_SERVER_VERSION="1.19.2"
+MINECRAFT_SERVER_BUILD="133"
 MINECRAFT_SERVER_JAR="https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/$MINECRAFT_SERVER_BUILD/downloads/paper-1.18.2-$MINECRAFT_SERVER_BUILD.jar"
 START_COMMAND="paper-pi"
 PACKAGES="git openjdk-17-jre"
