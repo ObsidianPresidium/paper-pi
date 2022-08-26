@@ -2,7 +2,7 @@
 ### --- These values are custom. They can be replaced with what you desire.
 MINECRAFT_SERVER_VERSION="1.19.2"
 MINECRAFT_SERVER_BUILD="133"
-MINECRAFT_SERVER_JAR="https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/$MINECRAFT_SERVER_BUILD/downloads/paper-1.18.2-$MINECRAFT_SERVER_BUILD.jar"
+MINECRAFT_SERVER_JAR="https://papermc.io/api/v2/projects/paper/versions/$MINECRAFT_SERVER_VERSION/builds/$MINECRAFT_SERVER_BUILD/downloads/paper-$MINECRAFT_SERVER_VERSION-$MINECRAFT_SERVER_BUILD.jar"
 START_COMMAND="paper-pi"
 PACKAGES="git openjdk-17-jre"
 INSTALLED_DIALOG=false
