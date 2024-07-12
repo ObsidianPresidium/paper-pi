@@ -17,7 +17,6 @@ This script downloads all the files into a folder called paper-pi, which will be
 4. Specify how much memory you want to allocate to the server.
 
 A good rule of thumb (assuming you're running Raspbian) is to leave 512MB of memory free to use for the OS. Below you can see what I would recommend you should run depending on your model.
-(Pis with less than 1GB is NOT recommended)
 
 | Model | Memory to allocate|
 | ----------- | ----------- |
@@ -27,5 +26,6 @@ A good rule of thumb (assuming you're running Raspbian) is to leave 512MB of mem
 | Raspberry Pi 4/5 4GB | `3584M` |
 | Raspberry Pi 4/5 8GB | `7680M` |
 | Rapsberry Pi 400 | `3584M` |
+(Pis with less than 1GB is NOT recommended)
 
 5. Run the server by executing `paper-pi` in console!
