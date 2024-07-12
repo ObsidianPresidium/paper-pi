@@ -17,10 +17,11 @@ This script downloads all the files into a folder called paper-pi, which will be
 4. Specify how much memory you want to allocate to the server.
 
 A good rule of thumb (assuming you're running Raspbian) is to leave 512MB of memory free to use for the OS. Below you can see what I would recommend you should run depending on your model.
+(Pis with less than 1GB is NOT recommended)
 
 | Model | Memory to allocate|
 | ----------- | ----------- |
-| Raspberry Pi 1/2/3A(+) Zero/Zero2 | (NOT RECOMMENDED!!) [Any amount by using a swap file of equal size](https://github.com/ObsidianPresidium/paper-pi/wiki/Old-Raspberry-Pi-models) |
+| Raspberry Pi 1/2/3A(+) Zero/Zero2 | [Any amount by using a swap file of equal size](https://github.com/ObsidianPresidium/paper-pi/wiki/Old-Raspberry-Pi-models) |
 | Raspberry Pi 3B(+) | `512M` |
 | Raspberry Pi 4 2GB | `1536M` |
 | Raspberry Pi 4/5 4GB | `3584M` |
