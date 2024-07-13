@@ -27,6 +27,6 @@ A good rule of thumb (assuming you're running Raspbian) is to leave 512MB of mem
 | Raspberry Pi 4/5 8GB | `7680M` |
 | Rapsberry Pi 400 | `3584M` |
 
-(Pis with less than 1GB is NOT recommended)
+(Pis with less than 1GB are NOT recommended)
 
 5. Run the server by executing `paper-pi` in console!
